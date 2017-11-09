@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <script type="application/javascript" src="./js/jquery-2.1.1.min.js"></script>
+    <script type="application/javascript" src="./js/bootstrap.min.js"></script>
+    
+    <title>Enigme 2</title>
+</head>
+
+
+<body>
+
+
+    <div id="limitation">
+
+        <div class="drag">
+            <p>puzzle</p>
+        </div>
+        <div class="drag">
+            <p>puzzle</p>
+        </div>
+        <div class="drag">
+            <p>puzzle</p>
+        </div>
+        <div class="drag">
+            <p>puzzle</p>
+        </div>
+
+        <br>
+
+        
+        
+        <div class="mag R1">
+            <p>receveur1</p>        
+        </div>
+        <div class="mag R2">
+            <p>receveur2</p>    
+        </div>
+        <div class="mag R3">
+            <p>receveur3</p>       
+        </div>
+        <div class="mag R4">
+            <p>receveur4</p>        
+        </div>
+
+    </div>
+
+
+
+
+    
+    
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script>
+</body>
+
+
+
+
+
+
+
+<style>
+.R1 {
+    top : 40%;
+    left : 40%;
+    position: absolute;
+}
+.R2 {
+    top : 40%;
+    left : 46.53%;
+    position: absolute;
+}
+.R3 {
+    top : 53%;
+    left : 40%;
+    position: absolute;
+}
+.R4 {
+    top : 53%;
+    left : 46.53%;
+    position: absolute;
+}
+
+
+
+
+.mag, .drag {
+
+    height: 100px;
+    width: 100px;
+    margin: 0px; 
+}
+
+.drag {
+    display: inline-block;
+    z-index: 1;
+}
+
+
+
+div {
+    
+    border : solid 2px;
+   
+}
+
+
+#limitation {
+    border : solid 2px;
+    height: 600px;
+    width: 1500px;
+    background-color: lightgray;
+}
+
+</style>
+
+
+
+
+
+
+<script>
+        
+
+        $(function(){
+            $('.drag').draggable({
+                containment : '#limitation',
+                snap : '.mag',
+                
+            });
+
+        });
+
+        
+</script>
+
+
+</html>
