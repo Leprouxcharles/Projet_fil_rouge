@@ -19,35 +19,40 @@
 
     <div id="limitation">
 
-        <div class="drag">
-            <p>puzzle</p>
+        <div class="drag p1">
+            <p>puzzle1</p>
         </div>
-        <div class="drag">
-            <p>puzzle</p>
+        <div class="drag p2">
+            <p>puzzle2</p>
         </div>
-        <div class="drag">
-            <p>puzzle</p>
+        <div class="drag p3">
+            <p>puzzle3</p>
         </div>
-        <div class="drag">
-            <p>puzzle</p>
+        <div class="drag p4">
+            <p>puzzle4</p>
         </div>
 
         <br>
 
         
         
-        <div class="mag R1">
+        <div class="mag r1">
             <p>receveur1</p>        
         </div>
-        <div class="mag R2">
+        <div class="mag r2">
             <p>receveur2</p>    
         </div>
-        <div class="mag R3">
+        <div class="mag r3">
             <p>receveur3</p>       
         </div>
-        <div class="mag R4">
+        <div class="mag r4">
             <p>receveur4</p>        
         </div>
+    
+        <p class="bravo">BRAVO</p>        
+        
+        
+        
 
     </div>
 
@@ -69,58 +74,51 @@
 
 
 <style>
-.R1 {
+    
+.bravo{
+    font-size : 60px;
+}
+    
+.r1 {
     top : 40%;
     left : 40%;
     position: absolute;
 }
-.R2 {
+.r2 {
     top : 40%;
-    left : 46.53%;
+    left : 60%;
     position: absolute;
 }
-.R3 {
-    top : 53%;
+.r3 {
+    top : 60%;
     left : 40%;
     position: absolute;
 }
-.R4 {
-    top : 53%;
-    left : 46.53%;
+.r4 {
+    top : 60%;
+    left : 60%;
     position: absolute;
 }
-
-
-
-
 .mag, .drag {
-
     height: 100px;
     width: 100px;
     margin: 0px; 
 }
-
 .drag {
     display: inline-block;
     z-index: 1;
 }
-
-
-
 div {
     
     border : solid 2px;
    
 }
-
-
 #limitation {
     border : solid 2px;
     height: 600px;
     width: 1500px;
     background-color: lightgray;
 }
-
 </style>
 
 
@@ -130,16 +128,65 @@ div {
 
 <script>
         
-
+    $('.bravo').hide();
+    
+    
+    var posd; 
+            var posr; 
         $(function(){
             $('.drag').draggable({
                 containment : '#limitation',
                 snap : '.mag',
                 
             });
-
         });
+    
+        $( ".drag" ).mouseup(function() {
+            console.log('yes');
+            p1 = $('.p1').position();
+            r1 = $('.r1').position();
+            p2 = $('.p2').position();
+            r2 = $('.r2').position();
+            p3 = $('.p3').position();
+            r3 = $('.r3').position();
+            p4 = $('.p4').position();
+            r4 = $('.r4').position();
+            console.log(p1.top);
+            console.log(r1.top);
+            if  ((r1.top == p1.top) && (r2.top == p2.top) && (r3.top == p3.top) && (r4.top == p4.top))  {
+                console.log("bravo");
+                $('.r1').hide();
+                $('.r2').hide();
+                $('.r3').hide();
+                $('.r4').hide();
+                $('.bravo').show(2000);
+                
+            };
+        });
+    
+        /*$(function(){
+            posd = $('.d1').position();
+            posr = $('.R1').position();
+            console.log(posd.top);
+            console.log(posr.top);
+            console.log(onmouseup);
+            
+            if  (posd.top==posr.top)  {
+                    console.log("bravo");
+                    };
+        });*/
 
+                /*console.log($('.d1').position())
+                if  (pos.top=)  {
+                    console.log("bravo");
+                    };
+                    console.log("bravo");
+            });*/
+        
+        /*$('.d1').position()==$('.R1').position()
+            $('.d2').position()==$('.R2').position()
+            $('.d3').position()==$('.R3').position()
+            $('.d4').position()==$('.R4').position()*/
         
 </script>
 
