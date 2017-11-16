@@ -47,7 +47,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 zone"><center>
-				<h1>Histoire:</h1>
+				<h1 id="color">Histoire:</h1>
 		
                   		
 					<a href="enigme1.html"><button type="submit" class="btn btn-default">Tu es prêt ?</button></a><br><br>
@@ -60,5 +60,14 @@
 
 		</div>
 	</div>
+	<script type="text/javascript">
+        			$("#color").mouseover(function(){
+                	$("#color").css({"color":"blue"});
+                });
+
+                	$("#color").mouseout(function(){
+                	$("#color").css({"color":"black"});
+            	});
+        </script>
 </body>
 </html>
