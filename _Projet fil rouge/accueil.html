@@ -47,7 +47,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 zone"><center>
-				<h1>Se connecter</h1>
+				<h1 id="color">Se connecter</h1>
 		
                   		<div class="form-group">
                     		<label for="pseudo"><h2>Ton pseudo:</h2></label>
@@ -70,7 +70,14 @@
 
 				
 
-		</div>
-	</div>
+		<script type="text/javascript">
+        			$("#color").mouseover(function(){
+                	$("#color").css({"color":"blue"});
+                });
+
+                	$("#color").mouseout(function(){
+                	$("#color").css({"color":"black"});
+            	});
+        </script>
 </body>
 </html>
