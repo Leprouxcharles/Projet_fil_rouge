@@ -20,21 +20,21 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="navbar-header">
-							<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menu" title="Accueil"><img src="images/boutonmenu.png" height="35px"><!--bouton reflexive--></button>
-							<a class="navbar-brand" href="accueil.html"><img class="logohome" src="./images/logohome.png" title="Accueil" height="70px"></a>
+							<!--bouton reflexive--><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menu" title="Accueil"><img class="glyphicon glyphicon-home"></button>
+							<a class="navbar-brand" href="accueil.php"><img class="logohome" src="./images/logohome1.png" title="Accueil" height="30px"></a>
 						</div>
 						<div class="collapse navbar-collapse" id="menu">
 							<ul class="nav navbar-nav">
-								<a href="enigme1.html" title="enigme1">
+								<a href="enigme1.php" title="Enigme 1">
 									<button  type="button" class="btn btn-primary btn-lg"><li>Enigme 1</li></button>
 								</a>
-								<a href="enigme2.html" title="enigme2">
+								<a href="enigme2.php" title="Enigme 2">
 									<button  type="button" class="btn btn-primary btn-lg"><li>Enigme 2</li></button>
 								</a>
-								<a href="enigme3.html" title="enigme3">
+								<a href="enigme3.php" title="Enigme 3">
 									<button  type="button" class="btn btn-primary btn-lg"><li>Enigme 3</li></button>
 								</a>
-								<a href="scores.html" title="scores">
+								<a href="scores.php" title="Table des scores">
 									<button  type="button" class="btn btn-primary btn-lg"><li>Table des scores </li></button>
 								</a>
 							</ul>
@@ -44,6 +44,9 @@
 			</div>
 		
 	</nav>
+
+	<!--________________________page______________________________-->
+
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 zone"><center>
@@ -63,8 +66,8 @@
                                     <div class="checkbox">
                                       <label><input type="checkbox"> Se souvenir de moi</label>
                                     </div>
-<!--si l'identification est correcte--> <a href="champion.html"><button type="submit" class="btn btn-default">Envoyer</button><br><br>
-                                        <a href="inscription.html" title="inscription" id="inscription">Tu n'as pas de compte?</a>
+<!--si l'identification est correcte--> <a href="champion.php"><button type="submit" class="btn btn-default">Envoyer</button><br><br>
+                                        <a href="inscription.php" title="inscription" id="inscription">Tu n'as pas de compte?</a>
 
 	</center></div>
 
@@ -72,7 +75,7 @@
 
 		<script type="text/javascript">
         			$("#color").mouseover(function(){
-                	$("#color").css({"color":"blue"});
+                	$("#color").css({"color":"#8B0000"});
                 });
 
                 	$("#color").mouseout(function(){

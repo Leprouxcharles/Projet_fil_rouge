@@ -21,20 +21,20 @@
 					<div class="col-md-12">
 						<div class="navbar-header">
 							<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menu" title="Accueil"><img src="images/boutonmenu.png" height="35px"><!--bouton reflexive--></button>
-							<a class="navbar-brand" href="accueil.html"><img class="logohome" src="./images/logohome.png" title="Accueil" height="70px"></a>
+							<a class="navbar-brand" href="accueil.php"><img class="logohome" src="./images/logohome1.png" title="Accueil" height="70px"></a>
 						</div>
 						<div class="collapse navbar-collapse" id="menu">
 							<ul class="nav navbar-nav">
-								<a href="enigme1.html" title="enigme1">
+								<a href="enigme1.php" title="Enigme 1">
 									<button  type="button" class="btn btn-primary btn-lg"><li>Enigme 1</li></button>
 								</a>
-								<a href="enigme2.html" title="enigme2">
+								<a href="enigme2.php" title="Enigme 2">
 									<button  type="button" class="btn btn-primary btn-lg"><li>Enigme 2</li></button>
 								</a>
-								<a href="enigme3.html" title="enigme3">
+								<a href="enigme3.php" title="Enigme 3">
 									<button  type="button" class="btn btn-primary btn-lg"><li>Enigme 3</li></button>
 								</a>
-								<a href="scores.html" title="scores">
+								<a href="scores.php" title="Table des scores">
 									<button  type="button" class="btn btn-primary btn-lg"><li>Table des scores </li></button>
 								</a>
 							</ul>
@@ -44,6 +44,10 @@
 			</div>
 		
 	</nav>
+
+	<!--________________________page______________________________-->
+
+
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 zone"><center>
@@ -51,82 +55,195 @@
 			</div>
 		</div>
 
-				<table class="scores">
+			
 
-			<tr>
-				<td class="infoscore">Place</td>
-				<td class="infoscore">Pseudo</td>
-				<td class="infoscore">Scores </td>
-			</tr>
+				<div class="row">	
 
-				<tr>
-					<td class="premier">1er</td>
-					<td class="premier"></td>
-					<td class="premier"></td>
-				</tr>
+					<div class="col-md-4 infoscore">
+						Classement
+					</div>
 
-							<tr>
-								<td class="deuxieme">2ème</td>
-								<td class="deuxieme"></td>
-								<td class="deuxieme"></td>      
-							</tr>
+					<div class="col-md-4 infoscore">
+						Pseudo
+					</div>
 
-								<tr>
-									<td class="troisieme">3ème</td>
-									<td class="troisieme"></td>
-									<td class="troisieme"></td>       
-								</tr>
+					<div class="col-md-4 infoscore">
+						Score
+					</div>
 
-									<tr>
-										<td class="quatrieme">4ème</td>
-										<td class="quatrieme"></td>
-										<td class="quatrieme"></td>       
-									</tr>
+				</div>	
 
-										<tr>
-											<td class="cinquieme">5ème</td>
-											<td class="cinquieme"></td>
-											<td class="cinquieme"></td>       
-										</tr>
+						<div class="row">	
 
-									<tr>
-										<td class="sixieme">6ème</td>
-										<td class="sixieme"></td>
-										<td class="sixieme"></td>       
-									</tr>
+							<div class="col-md-4 premier">
+								1er
+							</div>
 
-								<tr>
-									<td class="septieme">7ème</td>
-									<td class="septieme"></td>
-									<td class="septieme"></td>       
-								</tr>
+							<div class="col-md-4 premier">
+								sdfsdf
+							</div>
 
-							<tr>
-								<td class="huitieme">8ème</td>
-								<td class="huitieme"></td>
-								<td class="huitieme"></td>       
-							</tr>
+							<div class="col-md-4 premier">
+								1315
+							</div>
 
-						<tr>
-							<td class="neufieme">9ème</td>
-							<td class="neufieme"></td>
-							<td class="neufieme"></td>       
-						</tr>
-
-					<tr>
-						<td class="dixieme">10ème</td>
-						<td class="dixieme"></td>
-						<td class="dixieme"></td>       
-					</tr>
-</table>
-				
+						</div>
 
 
+							<div class="row">	
+
+								<div class="col-md-4 deuxieme">
+									2eme
+								</div>
+
+								<div class="col-md-4 deuxieme">
+
+								</div>
+
+								<div class="col-md-4 deuxieme">
+
+								</div>
+
+							</div>
+
+								
+								<div class="row">	
+
+									<div class="col-md-4 troisieme">
+										3eme
+									</div>
+
+									<div class="col-md-4 troisieme">
+
+									</div>
+
+									<div class="col-md-4 troisieme">
+
+									</div>
+
+								</div>
+
+									<div class="row">	
+
+										<div class="col-md-4 quatrieme">
+											4eme
+										</div>
+
+										<div class="col-md-4 quatrieme">
+
+										</div>
+
+										<div class="col-md-4 quatrieme">
+
+										</div>
+
+									</div>
+
+										<div class="row">	
+
+											<div class="col-md-4 cinquieme">
+												5eme
+											</div>
+
+											<div class="col-md-4 cinquieme">
+
+											</div>
+
+											<div class="col-md-4 cinquieme">
+
+											</div>
+
+										</div>
+
+											<div class="row">	
+
+												<div class="col-md-4 sixieme">
+													6eme
+												</div>
+
+												<div class="col-md-4 sixieme">
+
+												</div>
+
+												<div class="col-md-4 sixieme">
+
+												</div>
+
+											</div>
+
+													<div class="row">	
+
+														<div class="col-md-4 septieme">
+															7eme
+														</div>
+
+														<div class="col-md-4 septieme">
+
+														</div>
+
+														<div class="col-md-4 septieme">
+
+														</div>
+
+													</div>
+
+															<div class="row">	
+
+																<div class="col-md-4 huitieme">
+																	8eme
+																</div>
+
+																<div class="col-md-4 huitieme">
+
+																</div>
+
+																<div class="col-md-4 huitieme">
+
+																</div>
+
+															</div>
+
+																	<div class="row">	
+
+																		<div class="col-md-4 neuvieme">
+																			9eme
+																		</div>
+
+																		<div class="col-md-4 neuvieme">
+
+																		</div>
+
+																		<div class="col-md-4 neuvieme">
+
+																		</div>
+
+																	</div>
+
+																			<div class="row">	
+
+																				<div class="col-md-4 dixieme">
+																					10eme
+																				</div>
+
+																				<div class="col-md-4 dixieme">
+
+																				</div>
+
+																				<div class="col-md-4 dixieme">
+
+																				</div>
+
+																			</div>
+
+																					
+								
+
+	</div>
 	</div>
 
 			<script type="text/javascript">
         			$("#color").mouseover(function(){
-                	$("#color").css({"color":"blue"});
+                	$("#color").css({"color":"#8B0000"});
                 });
 
                 	$("#color").mouseout(function(){

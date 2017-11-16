@@ -40,7 +40,7 @@ h1{
     text-align: center;
 }
 
-/*---------------------------------------------------------------------------------*/
+/*--------------------------en commun aux pages------------------------------------------------*/
 
 .container{
 	border: 10px solid #B8860B;
@@ -50,16 +50,29 @@ h1{
 	padding-right: 50px;
 	padding-bottom: 30px;
 
-
-}
-
-#inscription{ /*page inscription*/
-	color: blue;
 }
 
 .zone{ /*col-md zone de se connecter et inscription*/
 	padding-left: 20%;
 	padding-right: 20%;
+}
+/*--------------------------------------Inscription-------------------------------------------*/
+#inscription{ /*page inscription*/
+	color: blue;
+}
+
+/*--------------------------------------Histoire-------------------------------------------*/
+
+.espace{
+	margin-bottom: 100px;
+}
+
+.espace50{
+	margin-bottom: 50px;
+}
+.histoire{
+	color: #B8860B;
+	font-size: 30px;
 }
 
 /*--------------------------------------Scores-------------------------------------------*/
@@ -74,51 +87,80 @@ h1{
 	}
 
 
-td{
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
-
 .infoscore{/*description colonne table scores (classement, pseudo, score*/
 	color: blue;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
 }
 
 .premier{
-	color: red;
+	color: green;
+	font-size: 30px;
+	padding-top: 100px;
+	padding-bottom: 20px;
 }
 
 .deuxieme{
 	color: yellow;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
 }
 
 .troisieme{
 	color: pink;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
 }
 
 .quatrieme{
-	color: green;
+	color: purple;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
 }
 
 .cinquieme{
-	color: purple;
+	color: red;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
 }
 
 .sixieme{
 	color: orange;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
 }
 
 .septieme{
 	color: lightblue;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
 }
 
 .huitieme{
 	color: white;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
 }
 
-.neufieme{
+.neuvieme{
 	color: grey;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
 }
 
 .dixieme{
 	color: brown;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 100px;
 }
+/*---------------------------------------------------------------------------------*/
