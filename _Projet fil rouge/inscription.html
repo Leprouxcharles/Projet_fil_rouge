@@ -47,7 +47,7 @@
 	<div class="container">
 		<div class="row">
         	<div class="col-md-12 zone">
-        		<center><h1>S'inscrire</h1>
+        		<center><h1 id="color">S'inscrire</h1>
           			
           		
           			<form>
@@ -76,6 +76,14 @@
 										<a href="accueil.html" title="accueil" id="inscription">Tu as déjà un compte?</a>
 			</center></div>
 
-        	
+        	<script type="text/javascript">
+        			$("#color").mouseover(function(){
+                	$("#color").css({"color":"blue"});
+                });
+
+                	$("#color").mouseout(function(){
+                	$("#color").css({"color":"black"});
+            	});
+        </script>
 </body>
 </html>
