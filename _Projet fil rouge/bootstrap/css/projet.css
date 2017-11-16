@@ -62,3 +62,63 @@ h1{
 	padding-right: 20%;
 }
 
+/*--------------------------------------Scores-------------------------------------------*/
+.scores{ /*table*/
+	position: relative;
+	width: 100%;
+	/*border: 5px solid #B8860B;*/
+	margin-bottom: 100px;
+	text-align: center;
+	padding:10px;
+	font-size: 40px;
+	}
+
+
+td{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.infoscore{/*description colonne table scores (classement, pseudo, score*/
+	color: blue;
+}
+
+.premier{
+	color: red;
+}
+
+.deuxieme{
+	color: yellow;
+}
+
+.troisieme{
+	color: pink;
+}
+
+.quatrieme{
+	color: green;
+}
+
+.cinquieme{
+	color: purple;
+}
+
+.sixieme{
+	color: orange;
+}
+
+.septieme{
+	color: lightblue;
+}
+
+.huitieme{
+	color: white;
+}
+
+.neufieme{
+	color: grey;
+}
+
+.dixieme{
+	color: brown;
+}
