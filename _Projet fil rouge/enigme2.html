@@ -47,7 +47,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 zone"><center>
-				<h1>Enigme 2</h1>
+				<h1 id="color">Enigme 2</h1>
 		
                   		
 
@@ -57,5 +57,15 @@
 
 		</div>
 	</div>
+	
+	<script type="text/javascript">
+        			$("#color").mouseover(function(){
+                	$("#color").css({"color":"blue"});
+                });
+
+                	$("#color").mouseout(function(){
+                	$("#color").css({"color":"black"});
+            	});
+        </script>
 </body>
 </html>
