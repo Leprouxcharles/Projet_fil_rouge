@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/main.css"/>
     <script type="application/javascript" src="./js/jquery-2.1.1.min.js"></script>
     <script type="application/javascript" src="./js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <title>Enigme 2</title>
 </head>
@@ -17,44 +18,73 @@
 <body>
 
 
-    <div id="limitation">
+    <div id="limitation" class="d">
 
         <div class="drag p1">
-            <p>puzzle1</p>
+            <p></p>
         </div>
         <div class="drag p2">
-            <p>puzzle2</p>
+            <p></p>
         </div>
         <div class="drag p3">
-            <p>puzzle3</p>
+            <p></p>
         </div>
         <div class="drag p4">
-            <p>puzzle4</p>
+            <p></p>
         </div>
+        <div class="foret decor p5">
+        </div>
+        <div class="montagne decor p6" id="mont">
+        </div>
+        
+        
+        <p class="bravo">BRAVO</p>
 
         <br>
 
-        
-        
         <div class="mag r1">
-            <p>receveur1</p>        
+            <p></p>        
         </div>
         <div class="mag r2">
-            <p>receveur2</p>    
+            <p></p>    
         </div>
         <div class="mag r3">
-            <p>receveur3</p>       
+            <p></p>       
         </div>
         <div class="mag r4">
-            <p>receveur4</p>        
+            <p></p>        
         </div>
-    
-        <p class="bravo">BRAVO</p>        
-        
-        
-        
 
+    
     </div>
+
+        <div class="container">
+            
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg gagne" data-toggle="modal" data-target="#myModal">Open Modal</button>
+          
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+              
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" onclick="location.href='enigme3.html'">Poursuivre</button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+        </div>
 
 
 
@@ -80,45 +110,142 @@
 }
     
 .r1 {
-    top : 40%;
-    left : 40%;
+    top : 180px;
+    left : 895px;
     position: absolute;
 }
 .r2 {
-    top : 40%;
-    left : 60%;
+    top : 180px;
+    left : 953px;
     position: absolute;
 }
 .r3 {
-    top : 60%;
-    left : 40%;
+    top : 238px;
+    left : 895px;
     position: absolute;
 }
 .r4 {
-    top : 60%;
-    left : 60%;
+    top : 238px;
+    left : 953px;
     position: absolute;
 }
+
+.p1 {
+    background-image: url('./img/Moonhg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 645px;
+    left : 1311px;
+    position: absolute;
+    
+}
+.p2 {
+    background-image: url('./img/Moonhd.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 718px;
+    left : 131px;
+    position: absolute;
+    
+}
+.p3 {
+    background-image: url('./img/Moonbg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 570px;
+    left : 330px;
+    position: absolute;
+    
+}
+.p4 {
+    background-image: url('./img/Moonbd.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 450px;
+    left : 1050px;
+    position: absolute;
+    
+}
+.p5 {
+    background-image: url('./img/Foret.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 550px;
+    left : 320px;
+    position: absolute;
+    
+}
+.p6 {
+    background-image: url('./img/Mount.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 375px;
+    left : 1000px;
+    position: absolute;
+    z-index: 1;
+    
+    
+}
+.p7 {
+    background-image: url('./img/Mount.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 375px;
+    left : 1000px;
+    position: absolute;
+    z-index: 1;
+    
+}
+
+.montagne{
+    height: 220px;
+    width: 220px;
+    
+}
+
+.foret{
+    height: 120px;
+    width: 120px;
+    
+}
+
+
 .mag, .drag {
-    height: 100px;
-    width: 100px;
+    height: 58px;
+    width: 58px;
     margin: 0px; 
 }
-.drag {
+.drag, .montagne, .foret {
     display: inline-block;
     z-index: 1;
 }
-div {
+/*.d {
     
     border : solid 2px;
    
-}
+}*/
 #limitation {
     border : solid 2px;
-    height: 600px;
+    height: 700px;
     width: 1500px;
-    background-color: lightgray;
+    background-image: url('./img/Jeu2.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
+
+body {
+    user-select: none;
+} 
+
 </style>
 
 
@@ -129,7 +256,7 @@ div {
 <script>
         
     $('.bravo').hide();
-    
+    $('.gagne').hide();
     
     var posd; 
             var posr; 
@@ -137,6 +264,13 @@ div {
             $('.drag').draggable({
                 containment : '#limitation',
                 snap : '.mag',
+                
+            });
+        });
+        $(function(){
+            $('.decor').draggable({
+                containment : '#limitation',
+                
                 
             });
         });
@@ -153,13 +287,20 @@ div {
             r4 = $('.r4').position();
             console.log(p1.top);
             console.log(r1.top);
-            if  ((r1.top == p1.top) && (r2.top == p2.top) && (r3.top == p3.top) && (r4.top == p4.top))  {
+            if  ((r1.top == p1.top) && (r1.left == p1.left) && (r2.top == p2.top) && (r2.left == p2.left) && (r3.top == p3.top) && (r3.left == p3.left) && (r4.top == p4.top) && (r4.left == p4.left))  {
+                $("#mont").attr('class', 'p6');
                 console.log("bravo");
                 $('.r1').hide();
                 $('.r2').hide();
                 $('.r3').hide();
                 $('.r4').hide();
-                $('.bravo').show(2000);
+                $('.bravo').show();
+                $('.gagne').click();
+
+
+                
+                
+                /*$('.bravo').show(2000);*/
                 
             };
         });
