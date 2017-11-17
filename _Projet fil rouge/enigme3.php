@@ -37,6 +37,9 @@
 								<a href="scores.php" title="Table des scores">
 									<button  type="button" class="btn btn-primary btn-lg"><li>Table des scores </li></button>
 								</a>
+									<a href="credits.php" title="Crédits">
+										<button  type="button" class="btn btn-primary btn-lg"><li>Crédits </li></button>
+									</a>
 							</ul>
 						</div>
 					</div>
@@ -53,7 +56,7 @@
 			<div class="col-md-12 zone"><center>
 				<h1 id="color">Enigme 3</h1>
 		
-                  		
+                  		<!--accède directement à la page crédit quand le niveau est fini-->
 
 	</center></div>
 

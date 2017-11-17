@@ -37,6 +37,9 @@
 								<a href="scores.php" title="Table des scores">
 									<button  type="button" class="btn btn-primary btn-lg"><li>Table des scores </li></button>
 								</a>
+									<a href="credits.php" title="Crédits">
+										<button  type="button" class="btn btn-primary btn-lg"><li>Crédits </li></button>
+									</a>
 							</ul>
 						</div>
 					</div>
@@ -68,6 +71,9 @@
                                     </div>
 <!--si l'identification est correcte--> <a href="champion.php"><button type="submit" class="btn btn-default">Envoyer</button><br><br>
                                         <a href="inscription.php" title="inscription" id="inscription">Tu n'as pas de compte?</a>
+                                    <div class="espace">
+                                    </div>
+                               
 
 	</center></div>
 

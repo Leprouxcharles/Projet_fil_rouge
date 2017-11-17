@@ -37,6 +37,9 @@
 								<a href="scores.php" title="Table des scores">
 									<button  type="button" class="btn btn-primary btn-lg"><li>Table des scores </li></button>
 								</a>
+									<a href="credits.php" title="Crédits">
+										<button  type="button" class="btn btn-primary btn-lg"><li>Crédits </li></button>
+									</a>
 							</ul>
 						</div>
 					</div>
