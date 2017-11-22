@@ -1,100 +1,113 @@
-<style>
-
 .bravo{
     font-size : 60px;
 }
 
 .r1 {
-    top : 180px;
-    left : 895px;
+    top : 348px;
+    left : 752px;
     position: absolute;
 }
 .r2 {
-    top : 180px;
-    left : 953px;
+    top : 348px;
+    left : 809px;
     position: absolute;
 }
 .r3 {
-    top : 238px;
-    left : 895px;
+    top : 405px;
+    left : 752px;
     position: absolute;
 }
 .r4 {
-    top : 238px;
-    left : 953px;
+    top : 405px;
+    left : 809px;
     position: absolute;
 }
 .p1 {
-    background-image: url('./img/Moonhg.png');
+    background-image: url('../img/Moonhg.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    top : 645px;
-    left : 1311px;
+    top : 844px;
+    left : 1113.67px;
     position: absolute;
 
 }
 .p2 {
-    background-image: url('./img/Moonhd.png');
+    background-image: url('../img/Moonhd.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    top : 718px;
-    left : 131px;
+    top : 520px;
+    left : 101.667px;
     position: absolute;
 
 }
 .p3 {
-    background-image: url('./img/Moonbg.png');
+    background-image: url('../img/Moonbg.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    top : 570px;
-    left : 330px;
+    top : 690px;
+    left : 258px;
     position: absolute;
 
 }
 .p4 {
-    background-image: url('./img/Moonbd.png');
+    background-image: url('../img/Moonbd.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    top : 450px;
-    left : 1050px;
+    top : 596px;
+    left : 872px;
     position: absolute;
 
 }
 .p5 {
-    background-image: url('./img/Foret.png');
+    background-image: url('../img/Foret.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    top : 550px;
-    left : 320px;
+    top : 667px;
+    left : 248px;
     position: absolute;
 
 }
-.p6 {
-    background-image: url('./img/Mount.png');
+.arbredpl {
+  height: 180px;
+  width: 92px;
+}
+.p5b {
+    background-image: url('../img/arbreDepl.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    top : 375px;
-    left : 1000px;
+    top : 473px;
+    left : 91.6667px;
     position: absolute;
-    z-index: 1;
+    z-index: 4;
+
+}
+.p6 {
+    background-image: url('../img/Mount.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 506px;
+    left : 784px;
+    position: absolute;
+    z-index: 4;
 
 
 }
 .p7 {
-    background-image: url('./img/Mount.png');
+    background-image: url('../img/Mount.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     top : 375px;
     left : 1000px;
     position: absolute;
-    z-index: 1;
+    z-index: 4;
 
 }
 .montagne{
@@ -114,18 +127,20 @@
 }
 .drag, .montagne, .foret {
     display: inline-block;
-    z-index: 1;
+    z-index: 4;
 }
+/*.d {
 
-#limitation {
     border : solid 2px;
+
+}*/
+#limitation {
+    background-image: url('../img/Jeu2.jpg');
     height: 700px;
-    width: 1500px;
-    background-image: url('./img/Jeu2.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
-body {
+body{
     user-select: none;
 }
