@@ -1,0 +1,131 @@
+<style>
+
+.bravo{
+    font-size : 60px;
+}
+
+.r1 {
+    top : 180px;
+    left : 895px;
+    position: absolute;
+}
+.r2 {
+    top : 180px;
+    left : 953px;
+    position: absolute;
+}
+.r3 {
+    top : 238px;
+    left : 895px;
+    position: absolute;
+}
+.r4 {
+    top : 238px;
+    left : 953px;
+    position: absolute;
+}
+.p1 {
+    background-image: url('./img/Moonhg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 645px;
+    left : 1311px;
+    position: absolute;
+
+}
+.p2 {
+    background-image: url('./img/Moonhd.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 718px;
+    left : 131px;
+    position: absolute;
+
+}
+.p3 {
+    background-image: url('./img/Moonbg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 570px;
+    left : 330px;
+    position: absolute;
+
+}
+.p4 {
+    background-image: url('./img/Moonbd.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 450px;
+    left : 1050px;
+    position: absolute;
+
+}
+.p5 {
+    background-image: url('./img/Foret.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 550px;
+    left : 320px;
+    position: absolute;
+
+}
+.p6 {
+    background-image: url('./img/Mount.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 375px;
+    left : 1000px;
+    position: absolute;
+    z-index: 1;
+
+
+}
+.p7 {
+    background-image: url('./img/Mount.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 375px;
+    left : 1000px;
+    position: absolute;
+    z-index: 1;
+
+}
+.montagne{
+    height: 220px;
+    width: 220px;
+
+}
+.foret{
+    height: 120px;
+    width: 120px;
+
+}
+.mag, .drag {
+    height: 58px;
+    width: 58px;
+    margin: 0px;
+}
+.drag, .montagne, .foret {
+    display: inline-block;
+    z-index: 1;
+}
+
+#limitation {
+    border : solid 2px;
+    height: 700px;
+    width: 1500px;
+    background-image: url('./img/Jeu2.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+body {
+    user-select: none;
+}

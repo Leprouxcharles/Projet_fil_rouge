@@ -1,0 +1,162 @@
+body{
+font-family: 'Press Start 2P', cursive;
+color: white;
+background:url('../images/backgroun2.png');
+background-size: cover;
+}
+
+h1{
+	margin-top: -20px;
+	padding-bottom: 30px;
+}
+
+/*-----------------------------------navbar----------------------------------------*/
+.navbar { /*enlever la bande noire de la navbar*/
+  background: none;
+}
+
+
+.container-fluid{
+	width: 100%
+}
+
+.logohome{ /*logo accueil manette*/
+	margin-top: -20px;
+	height: 80px;
+	margin-left: 20px;
+}
+.btn-primary{/*bouttons navbar*/
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: rgba(86, 85, 85, 0.9);
+	border: 10px solid #B8860B;
+	color: #8B0000;
+	display: inline-block;
+    text-align: center;
+}
+
+/*--------------------------en commun aux pages------------------------------------------------*/
+
+.container{
+	border: 10px solid #B8860B;
+	background-color: rgba(86, 85, 85, 0.8);
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 30px;
+
+}
+
+.zone{ /*col-md zone de se connecter et inscription*/
+	padding-left: 20%;
+	padding-right: 20%;
+}
+/*--------------------------------------Inscription-------------------------------------------*/
+#inscription{ /*page inscription*/
+	color: blue;
+}
+
+/*--------------------------------------Histoire-------------------------------------------*/
+
+.espace{
+	margin-bottom: 100px;
+}
+
+.espace50{
+	margin-bottom: 50px;
+}
+.histoire{
+	color: #B8860B;
+	font-size: 30px;
+}
+
+/*--------------------------------------Scores-------------------------------------------*/
+.scores{ /*table*/
+	position: relative;
+	width: 100%;
+	/*border: 5px solid #B8860B;*/
+	margin-bottom: 100px;
+	text-align: center;
+	padding:10px;
+	font-size: 40px;
+	}
+
+
+.infoscore{/*description colonne table scores (classement, pseudo, score*/
+	color: blue;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.premier{
+	color: green;
+	font-size: 30px;
+	padding-top: 100px;
+	padding-bottom: 20px;
+}
+
+.deuxieme{
+	color: yellow;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.troisieme{
+	color: pink;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.quatrieme{
+	color: purple;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.cinquieme{
+	color: red;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.sixieme{
+	color: orange;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.septieme{
+	color: lightblue;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.huitieme{
+	color: white;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.neuvieme{
+	color: grey;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.dixieme{
+	color: brown;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
