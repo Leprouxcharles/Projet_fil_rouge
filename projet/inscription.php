@@ -1,3 +1,19 @@
+<?php
+	// try {
+	// 	$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+	// 	$bdd = new PDO ('mysql:host=localhost;dbname=projet;charset=utf8', 'root', 'root', $pdo_options);
+	//
+	// 	$bdd->query('SELECT * From tjoueur');
+	// 	$reponse->setFetchMode(PDO::FETCH_OBJ);
+	// 	while ($donnees = $reponse->fetch()) {
+	// 		echo $donnees['pseudo'];
+	// 	}
+	// 	$bdd = null;        // Deconnexion
+	// }
+	// catch(PDOException $e) {
+	// 	echo $e->getMessage("");
+	// }
+ ?>
 <html>
 	<head>
 		<meta charset='utf-8'>

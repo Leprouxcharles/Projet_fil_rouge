@@ -83,8 +83,28 @@ if(isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
 			<div class="col-md-12 zone">
         <center>
   				<h1>Bienvenue <?php echo $_POST['pseudo'] ?> !</h1>
+          <?php
+            try {
+              $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+              $bdd = new PDO('mysql:host=localhost;dbname=projet', 'root', 'root', $pdo_options);
 
-    	</center>
+              // On recupere tout le contenu de la table Client
+              $reponse = $bdd->query('SELECT * FROM tjoueur, tpartie, tenigme WHERE tpartie.id_enigme=tenigme.id_enigme AND tpartie.id_joueur = tjoueur.id_joueur and tjoueur.pseudo = "'.$Pseudo.'"');
+              $reponse->setFetchMode(PDO::FETCH_OBJ);
+              // On affiche le resultat
+              while ($donnees = $reponse->fetch()) {
+                ?>
+                  <a href= " <?php echo $donnees['url'] ?>">Continuer</a>
+                <?php
+              }
+
+              $reponse->closeCursor();
+              }
+              catch(Exception $e) {
+                die('Erreur : '.$e->getMessage());
+            }
+          ?>
+      	</center>
       </div>
 		</div>
 	</div>

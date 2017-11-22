@@ -1,25 +1,3 @@
-<?php
-  // foreach ($_POST as $key => $val) echo '$_POST["'.$key.'"]='.$val.'<br/>';
-  ini_set("display_errors",0);error_reporting(0);
-
-  try {
-    $bdd = new PDO ('mysql:host=localhost;dbname=projet;charset=utf8', 'root', 'root');
-
-    $pseudo = $_POST['pseudo'];
-    $mdp = $_POST['password'];
-
-    if ($pseudo != null && $mdp != null) {
-      $sql = 'INSERT INTO tjoueur (pseudo, mdp) VALUES (\''.$pseudo.'\', \''.$mdp.'\')';
-      $bdd->exec($sql);
-			echo "Votre compte a bien été créé ";
-    }
-		$bdd = null;        // Deconnexion
-  }
-  catch(PDOException $e) {
-    echo $e->getMessage("");
-  }
-?>
-
 <html>
 	<head>
 		<meta charset='utf-8'>
@@ -78,6 +56,35 @@
             <label for="mdp"><h2>Ton mot de passe:</h2></label>
             <input type="password" required class="form-control" name="mdp" placeholder="Mot de passe" value="" id="mdp">
           </div>
+          <p>
+            <?php
+              // foreach ($_POST as $key => $val) echo '$_POST["'.$key.'"]='.$val.'<br/>';
+              ini_set("display_errors",0);error_reporting(0);
+                try {
+                  $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+                  $bdd = new PDO ('mysql:host=localhost;dbname=projet;charset=utf8', 'root', 'root', $pdo_options);
+                  $pseudo =  htmlentities(!empty($_POST['pseudo']), ENT_QUOTES, "ISO-8859-1");
+                  $mdp = htmlentities(!empty($_POST['password']), ENT_QUOTES, "ISO-8859-1");
+
+                  // $bdd->query('SELECT pseudo From tjoueur');
+                  // $reponse->setFetchMode(PDO::FETCH_OBJ);
+                  // while ($donnees = $reponse->fetch()) {
+                  //   echo $donnees['pseudo'];
+                  // }
+
+
+                  if ($pseudo && $mdp) {
+                    $sql = 'INSERT INTO tjoueur (pseudo, mdp) VALUES (\''.$pseudo.'\', \''.$mdp.'\')';
+                    $bdd->exec($sql);
+                    echo "Votre compte a bien été créé ";
+                  }
+                  $bdd = null;        // Deconnexion
+                }
+                catch(PDOException $e) {
+                  echo $e->getMessage("");
+                }
+              ?>
+          </p>
       		<input id="connexion" type="submit" name="connexion" class="btn btn-default" value="Connexion"/><br><br>
       		<a href="inscription.php" title="inscription" id="inscription">Tu n'as pas de compte?</a>
 				</form>
