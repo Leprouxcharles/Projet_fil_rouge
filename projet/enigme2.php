@@ -8,6 +8,9 @@
 			<link rel="stylesheet" href="css/enigme2.css">
 			<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 			<script type="application/javascript" src="js/jquery-2.1.1.min.js"></script>
+			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+			<script type="text/javascript" src="js/enigme2.js"></script>
 			<script type="application/javascript" src="js/bootstrap.min.js"></script>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<title>Enigme 2</title>
@@ -93,86 +96,89 @@
 					<div class="mag r4">
 							<p></p>
 					</div>
-				</div>
+			</div>
 		</div>
 
 	</div>
 	</div>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script>
-<script>
 
-    $('.bravo').hide();
-    $('.gagne').hide();
+	<div class="container">
 
-    var posd;
-            var posr;
-        $(function(){
-            $('.drag').draggable({
-                containment : '#limitation',
-                snap : '.mag',
+					 <!-- Trigger the modal with a button -->
+					 <button type="button" id="victoire" class="btn btn-info btn-lg gagne" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
-            });
-        });
-        $(function(){
-            $('.decor').draggable({
-                containment : '#limitation',
+					 <!-- Modal -->
+					 <div class="modal fade" id="myModal" role="dialog">
+						 <div class="modal-dialog">
+
+							 <!-- Modal content-->
+							 <div class="modal-content">
+								 <div class="modal-header">
+									 <button type="button" class="close" data-dismiss="modal">&times;</button>
+									 <h4 class="modal-title">Modal Header</h4>
+								 </div>
+								 <div class="modal-body">
+									 <p>Some text in the modal.</p>
+								 </div>
+								 <div class="modal-footer">
+									 <button class="btn btn-default" data-dismiss="modal" onclick="location.href='enigme3.html'">Poursuivre</button>
+								 </div>
+							 </div>
+
+						 </div>
+					 </div>
+
+			 </div>
+
+<script type="text/javascript">
+
+$('.bravo').hide();
+$('#victoire').hide();
+
+var posd;
+				var posr;
+		$(function(){
+				$('.drag').draggable({
+						containment : '#limitation',
+						snap : '.mag',
+
+				});
+		});
+		$(function(){
+				$('.decor').draggable({
+						containment : '#limitation',
 
 
-            });
-        });
+				});
+		});
 
-        $( ".drag" ).mouseup(function() {
-            console.log('yes');
-            p1 = $('.p1').position();
-            r1 = $('.r1').position();
-            p2 = $('.p2').position();
-            r2 = $('.r2').position();
-            p3 = $('.p3').position();
-            r3 = $('.r3').position();
-            p4 = $('.p4').position();
-            r4 = $('.r4').position();
-            console.log(p1.top);
-            console.log(r1.top);
-            if  ((r1.top == p1.top) && (r1.left == p1.left) && (r2.top == p2.top) && (r2.left == p2.left) && (r3.top == p3.top) && (r3.left == p3.left) && (r4.top == p4.top) && (r4.left == p4.left))  {
-                $("#mont").attr('class', 'p6');
-                console.log("bravo");
-                $('.r1').hide();
-                $('.r2').hide();
-                $('.r3').hide();
-                $('.r4').hide();
-                $('.bravo').show();
-                $('.gagne').click();
+		$( ".drag" ).mouseup(function() {
+				console.log('yes');
+				p1 = $('.p1').position();
+				r1 = $('.r1').position();
+				p2 = $('.p2').position();
+				r2 = $('.r2').position();
+				p3 = $('.p3').position();
+				r3 = $('.r3').position();
+				p4 = $('.p4').position();
+				r4 = $('.r4').position();
+				console.log(p1.top);
+				console.log(r1.top);
+				if  ((r1.top == p1.top) && (r1.left == p1.left) && (r2.top == p2.top) && (r2.left == p2.left)
+				&& (r3.top == p3.top) && (r3.left == p3.left) && (r4.top == p4.top) && (r4.left == p4.left)){
+						$("#mont").attr('class', 'p6');
+						console.log("CA MARCHE OU PAS ?????!!!!!!!!");
+						$('.r1').hide();
+						$('.r2').hide();
+						$('.r3').hide();
+						$('.r4').hide();
+						$('.bravo').show();
+						$('#victoire').click();
 
-
-                /*$('.bravo').show(2000);*/
-
-            };
-        });
-
-        /*$(function(){
-            posd = $('.d1').position();
-            posr = $('.R1').position();
-            console.log(posd.top);
-            console.log(posr.top);
-            console.log(onmouseup);
-
-            if  (posd.top==posr.top)  {
-                    console.log("bravo");
-                    };
-        });*/
-                /*console.log($('.d1').position())
-                if  (pos.top=)  {
-                    console.log("bravo");
-                    };
-                    console.log("bravo");
-            });*/
-
-        /*$('.d1').position()==$('.R1').position()
-            $('.d2').position()==$('.R2').position()
-            $('.d3').position()==$('.R3').position()
-            $('.d4').position()==$('.R4').position()*/
+				};
+		});
 
 </script>
+
 </body>
 </html>
