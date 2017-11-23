@@ -1,0 +1,22 @@
+#menu{
+  position: fixed;
+  margin-left: 0.5px;
+  z-index: 5;
+}
+
+.dropdown-menu{
+  border: 2px 2px 2px black;
+  border-style: outset;
+  border-radius: 20px;
+}
+
+#bouton{
+  width: 50px;
+  height: 60px;
+  background-color: lightgreen;
+  border: 1px solid black;
+}
+
+#ecran{
+  margin-top: 104;
+}
