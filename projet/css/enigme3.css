@@ -11,6 +11,7 @@ body{
    
 }
 #moins{
+	position: absolute;
     background-image: url('../img/Seau.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -19,12 +20,12 @@ body{
     left : 450px;
 	height:100px;
 	width:100px;
-    position: absolute;
 	user-select: none;
 
 }
 
 #plus {
+	 position: absolute;
     background-image: url('../img/Souffleur.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -33,7 +34,6 @@ body{
     left : 820;
 	height:100px;
 	width:170px;
-    position: absolute;
     z-index: 4;
 	user-select: none;
 
