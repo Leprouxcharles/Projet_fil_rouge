@@ -25,10 +25,11 @@
 				<center>
 					<h1 id="color">Enigme 1</h1>
 				</center>
+			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<h3>Score : <span class="score"></span></h3>
+		<div class="row" class="enigne1row">
+			<div class="col-md-12" class"enigne1row">
+				Score : <span class="score"></span>
 			</div>
 		</div>
 		<div class="row">
@@ -50,11 +51,9 @@
   $("#color").mouseover(function(){
     	$("#color").css({"color":"#8B0000"});
     });
-
   $("#color").mouseout(function(){
   	$("#color").css({"color":"black"});
 	});
-
 </script>
 <script>
 	var persotop;
@@ -62,21 +61,16 @@
 	var personnage = $(".perso");
 	var texte = false;
 	var ouverture = false;
-
 	var interrupt1 = $('.interrupt1')
-
 	/*Selection des éléments obstacles.*/
 	var buissonObs = $('.buisson');
 	var arbreObs = $('.arbre');
-
 	var zoneTop = $('.zone')[0].offsetTop;
 	var zoneLeft = $('.zone')[0].offsetLeft;
-
 /*Comptage des points pour le score finale. A déplacer dans le fichier JS générale.
 	pour le moment -1 par click*/
 	var score = 100;
 	$('.score').text(score)
-
 	function scorIng(event) {
 		score--;
 		$('.score').text(score)
@@ -95,7 +89,6 @@
 			}
 		});
 	});
-
 	console.log(yPos, xPos);
 	function movePerso(event){
 			if (event.key=='z'||event.key=='Z' || event.key=='ArrowUp'){
@@ -114,7 +107,6 @@
 				if(personnage[0].offsetTop >= 280 && personnage[0].offsetLeft <= arbreObs[0].offsetLeft) {
 					$(".perso").animate({'top' : '-=20px'},5);
 				}
-
 				if(personnage[0].offsetTop >= 360 && personnage[0].offsetLeft <= 570) {
 					$(".perso").animate({'top' : '+=10px'},5);
 					personnage.css({'background-image' : 'url("img/spritedos_bloque.png")'});
@@ -152,7 +144,6 @@
 					}
 				}
 			}
-
 			if (event.key=='d'||event.key=='D'|| event.key=='ArrowRight'){
 				$(".perso").animate({'left' : '+=10px'}, 5)
 				personnage.css({'background-image' : 'url("img/spritedroit.png")'});
@@ -160,7 +151,6 @@
 					$(".perso").animate({'left' : '-=10px'}, 5);
 					personnage.css({'background-image' : 'url("img/spritedroit_bloque.png")'});
 				}
-
 				/*Gestion des collisions avec le premier arbre.
 				Récupération délimitation de l'arbre pour les mouvenements allant vers la droite*/
 				if (personnage[0].offsetLeft >= arbreObs[0].offsetLeft && personnage[0].offsetTop <= 260) {
@@ -187,15 +177,12 @@
 		$(".pancarte").css({"display" : "block"});
 	}
  }
-
 	function choisiPerso(event) {
 		$('.perso').css({ 'top': '10px', 'left': '10px' });
 	}
-
 	function dansetexte(event) {
 		var bonjourtop = parseInt(Math.random() * (420));
 		var bonjourleft = parseInt(Math.random() * (750 - 10) + 10);
-
 		if (texte === true){
 			$('.azerty').offset({'top' :  239 ,'left': 341});
 		}
@@ -204,31 +191,25 @@
 			$('.azerty').offset({ 'top': bonjourtop, 'left': bonjourleft });
 		}
 	}
-
 	function dansetexte1(event) {
 		var bonjourtop = parseInt(Math.random() * (420));
 		var bonjourleft = parseInt(Math.random() * (750 - 10) + 10);
-
 		if (texte === true){
 			$('.azerty').offset({'top' :  239 ,'left': 341});
-
 		}
 		else {
 			$("textarea").val('');
 			$('.azerty').offset({ 'top': bonjourtop, 'left': bonjourleft });
 		}
 	}
-
 	function ouverturePassage(event) {
 		if (personnage[0].offsetTop >= 400 && personnage[0].offsetLeft <= 40){
 			$(".sortie").css({"display" : "none"});
 			ouverture = true;
 		}
 	}
-
 	/*fonction qui permet de finir l'énigme 1:
 		SI on rentre le mot arbre dans le nuage alors on peux passer à la suite*/
-
 		function victoireEnigme(event) {
 			if (event.key = 'enter' && $('.azerty')[0].value == 'arbre') {
 				$('.score').text(score)
