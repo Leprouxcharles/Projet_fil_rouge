@@ -6,7 +6,6 @@ USE Fil_rouge;
 
 DROP TABLE TPartie;
 DROP TABLE TJoueur;
-DROP TABLE TScore;
 DROP TABLE TEnigme;
 
 
@@ -20,7 +19,6 @@ CREATE TABLE TJoueur(
 	id_joueur SMALLINT UNSIGNED auto_increment,
 	pseudo VARCHAR(50),
     mdp VARCHAR(50),
-    mail VARCHAR(50),
 	PRIMARY KEY (id_joueur)
 );
 
