@@ -35,6 +35,7 @@ CREATE TABLE TPartie(
 );
 
 INSERT INTO TJoueur (pseudo, mdp) VALUES ('Rolland', 'Culer');
+INSERT INTO TPartie (score_joueur, id_joueur, id_enigme) VALUES (0, '1', '1');
 INSERT INTO TScore (score_joueur) VALUES (2000), (200), (3000), (456782), (2345354), (57585847);
 
 SELECT * FROM TScore;
