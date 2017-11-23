@@ -27,7 +27,7 @@
 			</div>
 			<div class="row" class="enigne1row">
 			<div class="col-md-12" class"enigne1row">
-				Score : <span class="score"></span>
+				Score : <span class="score3"></span>
 			</div>
 		</div>
 			<div id="limitation" class="d">
@@ -49,9 +49,9 @@
 
 </body>
 <script type="text/javascript">
-$("#reponse").hide();
-$("#valid").hide();
-$("#quizz").hide();
+$("#reponse").ide();
+$("#valid").ide();
+$("#quizz").ide();
 $("#enigme").show(500);
 
 $("#cacher").click (function(){
