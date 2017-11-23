@@ -49,9 +49,9 @@
 
 </body>
 <script type="text/javascript">
-$("#reponse").ide();
-$("#valid").ide();
-$("#quizz").ide();
+$("#reponse").hide();
+$("#valid").hide();
+$("#quizz").hide();
 $("#enigme").show(500);
 
 $("#cacher").click (function(){
