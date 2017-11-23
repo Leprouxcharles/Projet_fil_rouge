@@ -181,6 +181,12 @@
 
 																			</div>
 
+											<div class="row">	
+												<div class="col-md-12" id="texteaccueil">
+													<center><a href="menu.php">Revenir à l'accueil</a></center>
+												</div>
+											</div>
+
 
 
 
