@@ -34,7 +34,7 @@ CREATE TABLE TPartie(
 	CONSTRAINT Fk_id_enig FOREIGN KEY (id_enigme) REFERENCES TEnigme (id_enigme)
 );
 
-INSERT INTO TPartie (id_joueur, id_enigme) VALUE ('','','');
+INSERT INTO TJoueur (pseudo, mdp) VALUES ('Rolland', 'Culer');
 INSERT INTO TScore (score_joueur) VALUES (2000), (200), (3000), (456782), (2345354), (57585847);
 
 SELECT * FROM TScore;
