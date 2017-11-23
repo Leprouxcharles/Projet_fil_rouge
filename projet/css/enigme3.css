@@ -1,0 +1,104 @@
+body{
+   -moz-user-select:none;
+   -webkit-user-select:none;
+}
+
+#feu{
+	position:absolute;
+	top:46%;
+	left:42.5%;
+	z-index:15;
+   
+}
+#moins{
+    background-image: url('../img/Seau.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 75%;
+    left : 31%;
+	height:100px;
+	width:100px;
+    position: absolute;
+	user-select: none;
+
+}
+
+#plus {
+    background-image: url('../img/Souffleur.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top : 78%;
+    left : 62%;
+	height:100px;
+	width:170px;
+    position: absolute;
+    z-index: 4;
+	user-select: none;
+
+
+}
+
+
+#limitation {
+    background-image: url('../img/jeu3.jpg');
+    height: 700px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+	z-index:15;
+}
+
+ /*Texte en haut de la page*/
+#enigme{
+	position: absolute;
+	top:20%;
+	border-style: outset;
+	border-radius: 12px 12px 12px;
+	color: red;
+}
+
+/*Phrase d'indice apparaissant après tentative de pyromanie*/
+#quizz{
+	position:absolute;
+	top:70%;
+	left:48%;
+	font-size:8px;
+	z-index:5;
+}
+
+/*Bouton permettant l'apparition de l'image + les boutons de redimensionnement*/
+ #cacher{
+	padding: 6px 0 6px 0;
+	border-radius: 50%;
+	background-color: white;
+	width: 50px;
+	height: 40px;
+	position: absolute;
+}
+
+/*Div apparition zone de texte pour entrer la réponse*/
+#reponse{
+	position:absolute;
+	top:32.5%;
+	left:34%;
+	color:black;
+
+ }
+ 
+ #valid{
+	position:absolute;
+	top:32.5%;
+	left:57%;
+	color:black;
+ }
+
+#victoere{
+	position:absolute;
+	height:200px;
+	width:500px;
+	left:32%;
+	font-color:black;
+	z-index:18;
+}
