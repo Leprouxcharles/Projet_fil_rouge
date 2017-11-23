@@ -7,7 +7,12 @@ var top1 = $("#feu")[0].offsetTop;
 var left1= $("#feu")[0].offsetLeft;
 var feu=0;
 
-console.log(Himg, Wimg)
+var score = 100;
+	$('.score3').text(score)
+	function scorIng(event) {
+		score--;
+		$('.score3').text(score)
+	}
 
 // Fonction permettant la diminution de l'image
 function moins(event){
@@ -69,7 +74,8 @@ function gagne(event){
 
   console.log(util + "est la reponse");
     if(util == reponse){
-	  $('#limitation').append('<div id="victoere" class="modal-content">'+
+	$('.score3').text(score)
+	$('#limitation').append('<div id="victoere" class="modal-content">'+
                                     '<div class="modal-header" >'+
                                         '<h4 class="modal-title"><font color="black">VICTOIRE !</h4>'+
                                     '</div>'+
