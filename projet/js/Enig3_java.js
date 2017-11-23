@@ -60,8 +60,8 @@ console.log(Himg, Wimg)
 		$("#quizz").show(500);
 	}
   if(Himg != 0 || Wimg != 0){
-    $("#reponse").hide();
-	$("#valid").hide();
+    $("#reponse").hide(500);
+	$("#valid").hide(500);
   }else{
     $("#reponse").show(500);
 	$("#valid").show(500);
