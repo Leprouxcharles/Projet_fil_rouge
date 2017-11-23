@@ -6,6 +6,7 @@
 			<link rel="stylesheet" href="css/bootstrap.min.css"/>
 			<link rel="stylesheet" href="css/projet.css"/>
 			<link rel="stylesheet" href="css/enigme2.css">
+			<link rel="stylesheet" href="css/bouton.css">
 			<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 			<script type="application/javascript" src="js/jquery-2.1.1.min.js"></script>
 			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -22,14 +23,14 @@
 		<div class="row" id="menu">
 				<div class="col-sm-12">
 					<div>
-						<button id="bouton" data-toggle="dropdown" type="button" class="btn btn-default dropdown-toggle">
-						<span class="glyphicon glyphicon-align-left"></span>
+						<button id="bouton" data-toggle="dropdown" class="btn dropdown-toggle">
+						<span class="glyphicon glyphicon-align-justify"></span>
 						</button>
 						<ul class="dropdown-menu">
-							<li><a href="#"> Accueil: </a></li><br>
-							<li><a href="#"> Histoire: </a></li><br>
-							<li><a href="#"> Scores: </a></li><br>
-							<li id="deco"><a href="#"> Déconnexion: </a></li>
+							<li><a href="#index.php"> Accueil </a></li><br>
+							<li><a href="#"> Histoire </a></li><br>
+							<li><a href="#"> Scores </a></li><br>
+							<li id="deco"><a href="#"> Déconnexion </a></li>
 						</ul>
 					</div>
 				</div>
@@ -46,11 +47,7 @@
 				</center>
 			</div>
 		</div>
-		<!-- <div class="row">
-			<div class="col-md-12">
-				<h3>Score : <span class="score"></span></h3>
-			</div>
-		</div> -->
+
 	<div class="row">
 		<div class="col-cs-12">
 			<div id="limitation" class="d">
@@ -69,9 +66,6 @@
 					</div>
 					<div class="montagne decor p6" id="mont">
 					</div>
-
-
-					<p class="bravo">BRAVO</p>
 
 					<br>
 
