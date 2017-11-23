@@ -5,7 +5,7 @@ body{
 
 #feu{
 	position:absolute;
-	top:46%;
+	top:50%;
 	left:42.5%;
 	z-index:15;
    
@@ -15,7 +15,7 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    top : 75%;
+    top : 80%;
     left : 31%;
 	height:100px;
 	width:100px;
@@ -29,7 +29,7 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    top : 78%;
+    top : 84%;
     left : 62%;
 	height:100px;
 	width:170px;
@@ -43,7 +43,7 @@ body{
 
 #limitation {
     background-image: url('../img/jeu3.jpg');
-    height: 700px;
+    height: 600px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -62,7 +62,7 @@ body{
 /*Phrase d'indice apparaissant après tentative de pyromanie*/
 #quizz{
 	position:absolute;
-	top:70%;
+	top:75%;
 	left:48%;
 	font-size:8px;
 	z-index:5;
@@ -81,7 +81,7 @@ body{
 /*Div apparition zone de texte pour entrer la réponse*/
 #reponse{
 	position:absolute;
-	top:32.5%;
+	top:37%;
 	left:34%;
 	color:black;
 
@@ -89,7 +89,7 @@ body{
  
  #valid{
 	position:absolute;
-	top:32.5%;
+	top:37%;
 	left:57%;
 	color:black;
  }
