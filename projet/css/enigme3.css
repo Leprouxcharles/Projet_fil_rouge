@@ -5,8 +5,8 @@ body{
 
 #feu{
 	position:absolute;
-	top:50%;
-	left:42.5%;
+	top:320px;
+	left:573px;
 	z-index:15;
    
 }
@@ -15,8 +15,8 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    top : 80%;
-    left : 31%;
+    top : 520px;
+    left : 450px;
 	height:100px;
 	width:100px;
     position: absolute;
@@ -29,8 +29,8 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    top : 84%;
-    left : 62%;
+    top : 540px;
+    left : 820;
 	height:100px;
 	width:170px;
     position: absolute;
@@ -62,35 +62,25 @@ body{
 /*Phrase d'indice apparaissant après tentative de pyromanie*/
 #quizz{
 	position:absolute;
-	top:75%;
-	left:48%;
+	top:480px;
+	left:643px;
 	font-size:8px;
 	z-index:5;
-}
-
-/*Bouton permettant l'apparition de l'image + les boutons de redimensionnement*/
- #cacher{
-	padding: 6px 0 6px 0;
-	border-radius: 50%;
-	background-color: white;
-	width: 50px;
-	height: 40px;
-	position: absolute;
 }
 
 /*Div apparition zone de texte pour entrer la réponse*/
 #reponse{
 	position:absolute;
-	top:37%;
-	left:34%;
+	top:240px;
+	left:460px;
 	color:black;
 
  }
  
  #valid{
 	position:absolute;
-	top:37%;
-	left:57%;
+	top:240px;
+	left:770px;
 	color:black;
  }
 
@@ -98,7 +88,7 @@ body{
 	position:absolute;
 	height:200px;
 	width:500px;
-	left:32%;
+	left:425px;
 	font-color:black;
 	z-index:18;
 }
