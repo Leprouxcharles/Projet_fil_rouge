@@ -3,9 +3,8 @@
 		<meta charset='utf-8'>
 		<link rel= "stylesheet" type="text/css" href="index.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="css/main.css"/>
 		<link rel="stylesheet" href="css/projet.css"/>
-		<link rel="stylesheet" href="css/enigme1css.css" />
+		<link rel="stylesheet" href="css/enigme1.css" />
 		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 		<script type="application/javascript" src="js/jquery-2.1.1.min.js"></script>
 		<script type="application/javascript" src="js/bootstrap.min.js"></script>
@@ -213,9 +212,9 @@
 		function victoireEnigme(event) {
 			if (event.key = 'enter' && $('.azerty')[0].value == 'arbre') {
 				$('.score').text(score)
-				$('.zone').append('<div class="modal-content">'+
+				$('.zone').append('<div id="victoere" class="modal-content">'+
 									'<div class="modal-header">'+
-										'<h4 class="modal-title">VICTOIRE !</h4>'+
+										'<h4 class="modal-title"><font color="black">VICTOIRE !</h4>'+
 									'</div>'+
 									'<div class="modal-body">'+
 										'<p>Tu as <span class="score"></span> points !</p>'+
