@@ -1,3 +1,16 @@
+<?php
+session_start();
+	try {
+		$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+		$bdd = new PDO('mysql:host=localhost;dbname=projet', 'root', 'root', $pdo_options);
+		// On recupere l'url du joueur connecté.
+		$reponse2 = $bdd->exec("INSERT INTO TPartie (score_joueur, id_joueur, id_enigme) VALUES (0,'".$_SESSION['id_joueur']."', 1)");
+		// On affiche le resultat
+		}
+		catch(Exception $e) {
+			die('Erreur : '.$e->getMessage());
+	}
+?>
 <html>
 	<head>
 		<meta charset='utf-8'>
@@ -22,10 +35,10 @@
 				<h1 id="color">Histoire:</h1>
 					<div class="espace">
 					</div>
-				
+
 						<div class="histoire">
 							Tu t'es perdu?<br>
-							
+
 						</div>
 					<div class="espace">
 					</div>
@@ -33,7 +46,7 @@
 							Tu n'as qu'une solution pour surivre:<br>
 							Tu dois trouver la sortie!
 						</div>
-				
+
 				<div class="espace">
 				</div>
 				<div class="espace">
@@ -43,8 +56,7 @@
 						</div>
 				<div class="espace">
 				</div>
-                  		
-					<a href="enigme1.php"><button type="submit" class="btn btn-default">Tu es prêt ?</button></a>
+					<a href="php/updateEnigme1.php">Tu es prêt ?</a>
 				<div class="espace50">
 				</div>
 						<div class="histoire">
@@ -52,15 +64,16 @@
 						</div>
 				<div class="espace50">
 				</div>
+
 					<!-- lancer une pop-up?-->
-                    <a href="menu.php"><button type="submit" class="btn btn-default">Tu trembles de peur ?</button></a><br><br>
+                    <a href="index.php">Tu trembles de peur ?</a><br><br>
                     <!-- lancer une pop-up?-->
                     <div class="espace">
 					</div>
 
 	</center></div>
 
-				
+
 
 		</div>
 	</div>
@@ -75,12 +88,12 @@
                 	$("#color").css({"color":"white"});
             	});
         </script>
-        
-			</div>
-		</div>				
 
-    	
+			</div>
+		</div>
+
+
     </div>
-		
+
 </body>
 </html>

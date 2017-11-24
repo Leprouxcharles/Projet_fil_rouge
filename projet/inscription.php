@@ -1,19 +1,3 @@
-<?php
-	// try {
-	// 	$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-	// 	$bdd = new PDO ('mysql:host=localhost;dbname=projet;charset=utf8', 'root', 'root', $pdo_options);
-	//
-	// 	$bdd->query('SELECT * From tjoueur');
-	// 	$reponse->setFetchMode(PDO::FETCH_OBJ);
-	// 	while ($donnees = $reponse->fetch()) {
-	// 		echo $donnees['pseudo'];
-	// 	}
-	// 	$bdd = null;        // Deconnexion
-	// }
-	// catch(PDOException $e) {
-	// 	echo $e->getMessage("");
-	// }
- ?>
 <html>
 	<head>
 		<meta charset='utf-8'>
@@ -29,36 +13,7 @@
 		</style>
 	</head>
 	<body>
-		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<!--________________________container menu______________________________-->
-				<div class="row">
-					<div class="col-md-12">
-						<div class="navbar-header">
-							<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menu" title="Accueil"><img src="images/boutonmenu.png" height="35px"><!--bouton reflexive--></button>
-							<a class="navbar-brand" href="index.php"><img class="logohome" src="./images/logohome.png" title="Accueil" height="70px"></a>
-						</div>
-						<div class="collapse navbar-collapse" id="menu">
-							<ul class="nav navbar-nav">
-								<a href="enigme1.html" title="enigme1">
-									<button  type="button" class="btn btn-primary btn-lg"><li>Enigme 1</li></button>
-								</a>
-								<a href="enigme2.html" title="enigme2">
-									<button  type="button" class="btn btn-primary btn-lg"><li>Enigme 2</li></button>
-								</a>
-								<a href="enigme3.html" title="enigme3">
-									<button  type="button" class="btn btn-primary btn-lg"><li>Enigme 3</li></button>
-								</a>
-								<a href="scores.html" title="scores">
-									<button  type="button" class="btn btn-primary btn-lg"><li>Table des scores </li></button>
-								</a>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-
-	</nav>
+		<br><br><br>
 	<div class="container">
 		<div class="row">
         	<div class="col-md-12 zone">

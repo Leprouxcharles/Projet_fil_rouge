@@ -1,24 +1,11 @@
 <?php
-  $bdd = mysqli_connect('localhost', 'root', 'root', 'projet')
-?>
-<?php
-  if($bdd = mysqli_connect('localhost', 'root', 'root', 'projet')) {
-
-  }
-  else {
-  	echo 'Erreur';
-  }
-?>
-<?php
-  $resultat = mysqli_query($bdd, 'SELECT pseudo, score_joueur FROM TJoueur, TPartie, TScore WHERE TPartie.id_joueur = TJoueur.id_joueur AND TPartie.id_score = TScore.id_score ORDER BY score_joueur DESC LIMIT 10;');
-?>
-
+  session_start();
+ ?>
 <html>
 	<head>
 		<meta charset='utf-8'>
 		<link rel= "stylesheet" type="text/css" href="index.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		
 		<link rel="stylesheet" href="css/projet.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 		<script type="application/javascript" src="js/jquery-2.1.1.min.js"></script>
@@ -29,9 +16,6 @@
 		</style>
 	</head>
 	<body>
-		<div class="espace50">
-		</div>
-
 	<!--________________________page______________________________-->
 
 	<div class="container">
@@ -53,144 +37,32 @@
 			</div>
 				<div class="row">
 					<?php
-						while($donnees = mysqli_fetch_assoc($resultat)) {
-					?>
-					<div class="col-md-4 premier"></div>
-					<div class="col-md-4 premier"><?php echo $donnees['pseudo'];?></div>
-					<div class="col-md-4 premier"><?php echo $donnees['score_joueur'];?></div>
-				</div>
-				<?php } ?>
-				<div class="row">
-					<div class="col-md-4 deuxieme">
-						2eme
-					</div>
-					<div class="col-md-4 deuxieme"></div>
-					<div class="col-md-4 deuxieme"></div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 troisieme">
-						3eme
-					</div>
-					<div class="col-md-4 troisieme"></div>
-					<div class="col-md-4 troisieme"></div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 quatrieme">
-						4eme
-					</div>
-					<div class="col-md-4 quatrieme"></div>
-					<div class="col-md-4 quatrieme">
+            $classement = 1;
+            $css = 0;
+            $couleur = array('premier', 'deuxieme', 'troisieme', 'quatrieme', 'cinquieme', 'sixieme', 'septieme', 'huitieme', 'neuvieme', 'dixieme');
+            try {
+              $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+              $bdd = new PDO('mysql:host=localhost;dbname=projet', 'root', 'root', $pdo_options);
 
-										</div>
-
-									</div>
-
-										<div class="row">
-
-											<div class="col-md-4 cinquieme">
-												5eme
-											</div>
-
-											<div class="col-md-4 cinquieme">
-
-											</div>
-
-											<div class="col-md-4 cinquieme">
-
-											</div>
-
-										</div>
-
-											<div class="row">
-
-												<div class="col-md-4 sixieme">
-													6eme
-												</div>
-
-												<div class="col-md-4 sixieme">
-
-												</div>
-
-												<div class="col-md-4 sixieme">
-
-												</div>
-
-											</div>
-
-													<div class="row">
-
-														<div class="col-md-4 septieme">
-															7eme
-														</div>
-
-														<div class="col-md-4 septieme">
-
-														</div>
-
-														<div class="col-md-4 septieme">
-
-														</div>
-
-													</div>
-
-															<div class="row">
-
-																<div class="col-md-4 huitieme">
-																	8eme
-																</div>
-
-																<div class="col-md-4 huitieme">
-
-																</div>
-
-																<div class="col-md-4 huitieme">
-
-																</div>
-
-															</div>
-
-																	<div class="row">
-
-																		<div class="col-md-4 neuvieme">
-																			9eme
-																		</div>
-
-																		<div class="col-md-4 neuvieme">
-
-																		</div>
-
-																		<div class="col-md-4 neuvieme">
-
-																		</div>
-
-																	</div>
-
-																			<div class="row">
-
-																				<div class="col-md-4 dixieme">
-																					10eme
-																				</div>
-
-																				<div class="col-md-4 dixieme">
-
-																				</div>
-
-																				<div class="col-md-4 dixieme">
-
-																				</div>
-
-																			</div>
-
-											<div class="row">	
-												<div class="col-md-12" id="texteaccueil">
-													<center><a href="menu.php">Revenir à l'accueil</a></center>
-												</div>
-											</div>
-
-
-
-
-	</div>
+              // On recupere l'url du joueur connecté.
+              $reponse = $bdd->query('SELECT pseudo, score_joueur FROM TJoueur, TPartie, TScore WHERE TPartie.id_joueur = TJoueur.id_joueur AND TPartie.id_score = TScore.id_score ORDER BY score_joueur DESC LIMIT 10');
+              // On affiche le resultat
+              while ($donnees = $reponse->fetch(PDO::FETCH_OBJ)) {
+                ?>
+                <div class="row <?php echo $couleur[$css++] ?>">
+                  <div class="col-md-4"><?php echo $classement++ ?></div>
+                  <div class="col-md-4"><?php echo $donnees->pseudo ?></div>
+                  <div class="col-md-4"><?php echo $donnees->score_joueur ?></div>
+                </div>
+                <?php
+              }
+              $reponse->closeCursor();
+              }
+              catch(Exception $e) {
+                die('Erreur : '.$e->getMessage());
+            }
+           ?>
+  	</div>
 	</div>
 
 			<script type="text/javascript">

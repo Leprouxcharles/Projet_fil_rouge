@@ -25,6 +25,12 @@ if(isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
 											exit();
                 } else {
                     $_SESSION['pseudo'] = $Pseudo;
+                    $sql = "SELECT id_joueur FROM tjoueur WHERE pseudo = '".$Pseudo."' AND mdp = '".$MotDePasse."'";
+                    $result = $mysqli->query($sql);
+											while($row = $result->fetch_assoc()) {
+                        $_SESSION['id_joueur']=$row['id_joueur'];
+                      }
+                    // $_SESSION['id_joueur'];
 										echo "Vous êtes à présent connecté !";
                 }
             }
@@ -32,7 +38,6 @@ if(isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
     }
 }
 ?>
-
 <html>
 	<head>
 		<meta charset='utf-8'>
@@ -48,62 +53,54 @@ if(isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
 		</style>
 	</head>
 	<body>
-		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<!--________________________container menu______________________________-->
-				<div class="row">
-					<div class="col-md-12">
-						<div class="navbar-header">
-							<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menu" title="Accueil"><img src="images/boutonmenu.png" height="35px"><!--bouton reflexive--></button>
-							<a class="navbar-brand" href="index.php"><img class="logohome" src="./images/logohome.png" title="Accueil" height="70px"></a>
-						</div>
-						<div class="collapse navbar-collapse" id="menu">
-							<ul class="nav navbar-nav">
-								<a href="enigme1.html" title="enigme1">
-									<button  type="button" class="btn btn-primary btn-lg"><li>Enigme 1</li></button>
-								</a>
-								<a href="enigme2.html" title="enigme2">
-									<button  type="button" class="btn btn-primary btn-lg"><li>Enigme 2</li></button>
-								</a>
-								<a href="enigme3.html" title="enigme3">
-									<button  type="button" class="btn btn-primary btn-lg"><li>Enigme 3</li></button>
-								</a>
-								<a href="scores.html" title="scores">
-									<button  type="button" class="btn btn-primary btn-lg"><li>Table des scores </li></button>
-								</a>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-
-	</nav>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 zone">
         <center>
-  				<h1>Bienvenue <?php echo $_POST['pseudo'] ?> !</h1>
-          <?php
-            try {
-              $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-              $bdd = new PDO('mysql:host=localhost;dbname=projet', 'root', 'root', $pdo_options);
+  				<h1>Bienvenue <?php echo $_SESSION['pseudo'] ?> !</h1>
+                </div>
+                  <div class="row">
+                    <div class="col-md-12 fondMenu">
+                      <center>
+                        <ul>
+                          <li class="menu">
+                            <?php
+                              try {
+                                $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+                                $bdd = new PDO('mysql:host=localhost;dbname=projet','root', 'root', $pdo_options);
 
-              // On recupere tout le contenu de la table Client
-              $reponse = $bdd->query('SELECT * FROM tjoueur, tpartie, tenigme WHERE tpartie.id_enigme=tenigme.id_enigme AND tpartie.id_joueur = tjoueur.id_joueur and tjoueur.pseudo = "'.$Pseudo.'"');
-              $reponse->setFetchMode(PDO::FETCH_OBJ);
-              // On affiche le resultat
-              while ($donnees = $reponse->fetch()) {
-                ?>
-                  <a href= " <?php echo $donnees['url'] ?>">Continuer</a>
-                <?php
-              }
+                                // On recupere l'url du joueur connecté.
+                                  $reponse = $bdd->query('SELECT url FROM tjoueur, tpartie, tenigme WHERE tpartie.id_enigme=tenigme.id_enigme AND tpartie.id_joueur = tjoueur.id_joueur and tjoueur.pseudo = "'.$_SESSION['pseudo'].'"');
+                                // On affiche le resultat
+                                while ($donnees = $reponse->fetch(PDO::FETCH_OBJ)) {
+                                  ?>
+                                    <a href= " <?php echo $donnees->url ?>">Continuer</a>
+                                  <?php
+                                }
+                                $reponse->closeCursor();
+                                }
+                                catch(Exception $e) {
+                                  die('Erreur : '.$e->getMessage());
+                              }
+                            ?>
+                          </li>
+                            <br>
+                          <li class="menu">
+                              <a href= "story.php">Nouvelle Aventure</a>
+                            </li>
+                            <br>
+                          <li class="menu"><a href="scores.php">Scores</a></li>
+                            <br>
+                          <li class="menu"><a href="credits.php">Crédits</a></li>
+                            <br>
+                          <li class="menu"><a href="deconnexion.php">Déconnexion</a></li>
+                            <br>
+                        </ul>
+                      </center>
+                    </div>
+                  </div>
+        </div>
 
-              $reponse->closeCursor();
-              }
-              catch(Exception $e) {
-                die('Erreur : '.$e->getMessage());
-            }
-          ?>
       	</center>
       </div>
 		</div>
