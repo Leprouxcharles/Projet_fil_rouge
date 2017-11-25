@@ -1,0 +1,102 @@
+.zone {
+  border: 3px red solid;
+  background-image: url('../img/Jeu1-1REDIM.png');
+  height : 600px;
+}
+.perso {
+  background-image: url('../img/spriteface.png');
+  height: 70px;
+  width: 50px;
+  position: absolute;
+  top: -150;
+  left: 1000px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0px black solid;
+  align: center;
+  z-index: 4;
+}
+.sortie {
+  position: absolute;
+  top: 411px;
+  left: 670px;
+}
+.pancarte {
+  position: absolute;
+  top: 229px;
+  left: 900px;
+  display: none;
+}
+.arbre{
+  position: absolute;
+  left: 100px;
+  top: 20px;
+  z-index: -4;
+}
+.interruptgg {
+  position: absolute;
+  left: 806px;
+  top: 450px;
+}
+.buisson {
+  position: absolute;
+  left: 360px;
+  z-index: -4;
+}
+.buisson2 {
+  position: absolute;
+  left: 494px;
+  top: 35px;
+}
+.interrupt1 {
+  position: absolute;
+  top: 442px;
+  left: 35px;
+}
+.passage {
+  position: absolute;
+  left: 703px;
+  top: 413px;
+  height: 110px;
+  width: 50px;
+  background-color: red;
+}
+.deplacable {
+  position: absolute;
+  top: 406px;
+  left: -3px;
+}
+textarea {
+  border: 0px black solid;
+  font-family: "comic sans ms";
+  color: black;
+  font-weight: bolder;
+  background-color: rgba(255, 255, 255, 0);
+  width: 338px;
+  height: 173px;
+  line-height: 160px;
+  resize:none;
+  z-index: 3;
+  position: absolute;
+  text-align: center;
+}
+button:focus {
+  outline:0;
+}
+
+#nuage{
+  background-image: url('../img/nuage.png');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  height:200px;
+  overflow:hidden;
+}
+
+#victoere{
+	position:absolute;
+	height:200px;
+	width:500px;
+	left:295px;
+	font-color:black;
+	z-index:18;
+}
