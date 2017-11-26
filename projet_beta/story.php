@@ -56,19 +56,21 @@ session_start();
 						</div>
 				<div class="espace">
 				</div>
+					<div class="histoire">
 					<a href="php/updateEnigme1.php">Tu es prêt ?</a>
 				<div class="espace50">
 				</div>
-						<div class="histoire">
+						
 							ou
-						</div>
+						
 				<div class="espace50">
 				</div>
 
 					<!-- lancer une pop-up?-->
-                    <a href="index.php">Tu trembles de peur ?</a><br><br>
+                    <a href="connexion.php">Tu trembles de peur ?</a><br><br>
                     <!-- lancer une pop-up?-->
                     <div class="espace">
+					</div>
 					</div>
 
 	</center></div>
